@@ -58,7 +58,7 @@ class MainLoop:
         if m == None:
             return False
 
-        self.logger.send("MainLoop.handleInfo()")
+        self.logger.send("MainLoop.handleStatus()")
         
         response="HTTP/1.0 200 OK\r\n\r\n" + ujson.dumps(self.getStatus())
         cl.sendall(response)

@@ -1,8 +1,6 @@
 import time
 from machine import Pin
 
-deadline = time.ticks_add(time.ticks_ms(), 300)
-
 right_forward = Pin(18, Pin.OUT)
 right_back = Pin(19, Pin.OUT)
 

@@ -26,35 +26,51 @@ b. This is controlled via telegram. (a listener to web buttons then makes HTTP r
 
 # 3. Components used:
 
-a. Raspberry pi pico
+
+1. Raspberry pi pico
 - https://www.kiwi-electronics.com/nl/raspberry-pi-pico-w-10938?search=raspberry%20pi%20pico
 
-b. DRV8833
+2. DRV8833
 - https://www.tinytronics.nl/en/mechanics-and-actuators/motor-controllers-and-drivers/stepper-motor-controllers-and-drivers/drv8833-bipolar-stepper-motor-and-dc-motor-motor-controller
 
-c. Large green and red plastic buttons at the bottom.
+3. Large green and red plastic buttons at the bottom.
 
-d. Any electric waterproof junction box - drill holes for buttons on bottom to avoid water ingress, use glands for wires.
+4. Any electric waterproof junction box - drill holes for buttons on bottom to avoid water ingress, use glands for wires.
 
-e. Black cable is a 10 meter 2 wire electric cable.
+- https://www.amazon.nl/dp/B0C7KSQK9Q?ref=ppx_yo2ov_dt_b_fed_asin_title
 
-f. Hook up to a generic USB power supply via 2 polyfuses to avoid any issues with shorts (power supply also detects shorts but did not want to risk that)
+5. Black cable is a 10 meter 2 wire electric cable.
 
-https://www.tinytronics.nl/en/components/fuses/self-restoring-fuse-pptc-polyfuse-2000ma-through-hole
+6. Hook up to a generic USB power supply via 2 polyfuses to avoid any issues with shorts (power supply also detects shorts but did not want to risk that)
 
-g. Insulating sleeve for wires
+- https://www.tinytronics.nl/en/components/fuses/self-restoring-fuse-pptc-polyfuse-2000ma-through-hole
 
-https://www.distrelec.biz/en/insulating-sleeve-4mm-red-brown-glass-fibre-silicone-bourgeois-pf03-062-08-316/p/15505268?pos=5&origPos=6&origPageSize=50&track=true&sid=q7s4sH6bkP&itemList=category
+7. Insulating sleeve for wires
 
-h. Time module (unused so far can ignore)
+- https://www.distrelec.biz/en/insulating-sleeve-4mm-red-brown-glass-fibre-silicone-bourgeois-pf03-062-08-316/p/15505268?pos=5&origPos=6&origPageSize=50&track=true&sid=q7s4sH6bkP&itemList=category
 
-i. Solenoid valve
+8. Time module (unused so far can ignore)
 
-https://www.tinytronics.nl/en/mechanics-and-actuators/solenoids/solenoid-valves/solenoid-valve-latching-5v-brass-g1-2
+9. Solenoid valve
 
-j. Water hammer arrestor. (IMPORTANT - you don't want to destroy pipes when switching via solenoid)
+- https://www.tinytronics.nl/en/mechanics-and-actuators/solenoids/solenoid-valves/solenoid-valve-latching-5v-brass-g1-2
 
-Any should do based on preferrence: https://www.amazon.com/water-hammer-arrestor/s?k=water+hammer+arrestor
+10. Water hammer arrestor. (IMPORTANT - you don't want to destroy pipes when switching via solenoid)
+
+- Any should do based on preferrence: https://www.amazon.com/water-hammer-arrestor/s?k=water+hammer+arrestor
+- The actual piece: https://www.obadis.com/en/caleffi-antishock-wasserschlagdampfer-525150-uberwurfmutter-3-4-ig-x-3-4-ag-messing-gehause-verchromt.html
+
+11. 2-way valve water distributor
+
+- https://www.amazon.nl/dp/B07T41LBGH
+
+12. Rubber rings to have water tight seals:
+
+- https://www.amazon.nl/dp/B097Q151ZN?ref=ppx_yo2ov_dt_b_fed_asin_title
+
+13. Connectors
+
+- https://www.amazon.nl/dp/B09FKBYY5X?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 
 # 4. Software
 
