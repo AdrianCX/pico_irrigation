@@ -27,9 +27,6 @@ class MainLoop:
 
         self.logger.send("MainLoop.__init__()")
 
-    def version(self):
-        return "1"
-    
     def getBatteryLevel(self):
         return self.battery_level.read_u16()
     
@@ -45,12 +42,19 @@ class MainLoop:
 
     def getStatus(self):
         data = {}
-        data["battery_level"] = self.getBatteryLevel()
-        data["irrigation"] = self.irrigation_on
+
+        #unused currently
+        #data["battery_level"] = self.getBatteryLevel()
+
+        data["time"] = self.logger.get_time()
+        
+        if self.irrigation_on:
+            data["irrigation"] = "on"
+            data["time_left_ms"] = time.ticks_diff(self.irrigation_shutoff, time.ticks_ms())
+        else:
+            data["irrigation"] = "off"
+            
         data["messages"] = self.messages
-        data["version"] = self.version()
-        data["time"] = time.ticks_ms()
-        data["shutoff"] = self.irrigation_shutoff
         return data
 
     def handleStatus(self, cl, request):
@@ -67,8 +71,7 @@ class MainLoop:
         return True
 
     def addMessage(self, message):
-        message["time"] = time.ticks_ms()
-        self.messages.append(message)
+        self.messages.append(self.logger.get_time() + " " + str(message))
         
         if len(self.messages) > self.message_limit:
             self.messages.pop(0)
@@ -85,7 +88,7 @@ class MainLoop:
         irrigation.close_all()
         cl.sendall("HTTP/1.0 200 OK\r\n\r\n")
 
-        self.addMessage({"irrigation":False,"reason":"web command"})
+        self.addMessage("irrigation off, web command")
         return True
 
     def handleOpen(self, cl, request):
@@ -102,7 +105,7 @@ class MainLoop:
         
         self.logger.send("MainLoop.handleOpen() Irrigation[on] web command, duration: " + str(m.group(1)))
 
-        self.addMessage({"irrigation":True,"reason":"web command","duration":duration})
+        self.addMessage("irrigation on, web command, duration: " + str(duration))
 
         self.irrigation_shutoff = time.ticks_add(time.ticks_ms(), duration*1000)
         self.irrigation_on = True
@@ -118,7 +121,7 @@ class MainLoop:
             irrigation.close_all()
             self.irrigation_on = False
 
-            self.addMessage({"irrigation":False,"reason":"timer"})
+            self.addMessage("irrigation off, timer")
             self.logger.send("MainLoop.update() Irrigation[off] timer")
             
         # make sure at least 500ms press
@@ -137,13 +140,13 @@ class MainLoop:
         if self.red_count > 10 and self.red_last == 1:
             self.red_last = 0
             irrigation.close_all()
-            self.addMessage({"irrigation":False,"reason":"red button"})
+            self.addMessage("irrigation off, red button")
             self.logger.send("MainLoop.update() Irrigation[off] red button pressed")
             return
 
         if self.green_count > 10 and self.green_last == 1:
             self.green_last=0
             irrigation.open_all()
-            self.addMessage({"irrigation":False,"reason":"green button"})
+            self.addMessage("irrigation off, green button")
             self.logger.send("MainLoop.update() Irrigation[on] green button pressed")
             return

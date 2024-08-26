@@ -42,8 +42,8 @@ def connect_wlan():
     wlan.config(pm = 0xa11140)
 
     try:
-        if config.IP_ADDRESS != None and config.NETMASK != None and config.ROUTER_IP != None:
-            wlan.ifconfig((config.IP_ADDRESS, config.NETMASK, config.ROUTER_IP, config.ROUTER_IP))
+        if config.IP_ADDRESS != None and config.NETMASK != None and config.ROUTER_IP != None and config.DNS_IP != None:
+            wlan.ifconfig((config.IP_ADDRESS, config.NETMASK, config.ROUTER_IP, config.DNS_IP))
 
         if config.WIFI_CHANNEL != None:
             wlan.config(channel = config.WIFI_CHANNEL)
