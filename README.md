@@ -75,7 +75,8 @@ b. This is controlled via telegram. (a listener to web buttons then makes HTTP r
 # 4. Software
 
 You should copy over all files in "src/base/" and "src/derived" on the pico in "/" directory.
-To get callstack when exceptions are reported you need a custom compiled micropython, will share that soon.
+To get callstack when exceptions are reported you need a custom compiled micropython. https://github.com/AdrianCX/custom_micropython
+It will work with official micropython, you just won't have full callstack.:
 
 Logic is as follows:
 1. src/base - common server components that can be reused for other projects

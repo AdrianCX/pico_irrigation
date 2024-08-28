@@ -4,10 +4,11 @@ import ujson
 import ntptime
 
 try:
-    from excprinter import get_callstack
+    from excprinter import get_callstack, get_current_callstack
 except Exception as e:
-    get_callstack = lambda e : []
-
+    get_callstack = lambda e: []
+    get_current_callstack = lambda: []
+# 
 class Logger:
     def __init__(self, ip, port, machine_id):
         try:
@@ -25,7 +26,7 @@ class Logger:
             self.set_status("Logger.__init__()", "ntptime.settime()", e)
 
     def get_exception_info(self, e):
-        return "exception: " + str(type(e)) + "(" + str(e) + "), callstack: " + str(get_callstack(e))
+        return "exception: " + str(type(e)) + "(" + str(e) + "), exception callstack: " + str(get_callstack(e)) + ", catch callstack: " + str(get_current_callstack())
 
     def set_status(self, tag, status):
         self.status[str(tag)] = { self.get_time():status }
