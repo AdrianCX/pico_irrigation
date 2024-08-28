@@ -38,24 +38,23 @@ class WebServer:
         try: 
             import derived_logic
             self.logic = derived_logic.MainLoop(self.logger)
-            self.logger.set_status("WebServer.__init__()", "OK")
-            self.logger.send("WebServer.__init__() OK")
+            self.logger.send_status("WebServer.__init__()", "OK")
 
         except Exception as e:
             self.logic = None
-            self.logger.set_status("WebServer.__init__()", "Failed importing/creating derived_logic, exception: " +  str(e))
-            self.logger.send("WebServer.__init__() Failed importing/creating derived_logic, exception: " +  str(e))
+            self.logger.send_status("WebServer.__init__()", "Failed importing/creating derived_logic", e)
 
     def update(self):
         if time.ticks_diff(self.deadline, time.ticks_ms()) < 0:
             self.deadline = time.ticks_add(time.ticks_ms(), self.logging_time)
-            self.logger.send("Logger.Update() " + self.getStatusString())
+            self.logger.send("WebServer.Update() " + self.getStatusString())
             
         if self.logic != None:
             try:
                 self.logic.update()
             except Exception as e:
-                self.logger.set_status("MainLoop.update() last exception: ", str(e))
+                # can happen at every update, we don't want to send a UDP packet that often, so just set status to be queried or sent periodically.
+                self.logger.set_status("WebServer.update(1)", "derived logic call failed", e)
 
         cl = self.listener.accept()
         if not cl:
@@ -66,12 +65,12 @@ class WebServer:
             self.handleClient(cl)
             cl.close()
         except Exception as e:
-            self.logger.set_status("WebServer.update() last exception: ", str(e))
+            # Client handling exception, set status and send udp packet for it
+            self.logger.send_status("WebServer.update(2)", "client handling failed", e)
 
-            self.logger.send("WebServer.update() Exception handling: " + str(e))
             try:
                 cl.sendall('HTTP/1.0 500 Internal Server Error\r\nContent-type: text/html\r\n\r\n')
-                cl.sendall("Exception: " + str(e))
+                cl.sendall(self.logger.get_exception_info(e))
                 cl.close()
             except Exception as e:
                 pass
