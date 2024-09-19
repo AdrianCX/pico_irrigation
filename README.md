@@ -28,7 +28,7 @@ b. This is controlled via telegram. (a listener to web buttons then makes HTTP r
 
 Items below are listed for completeness and were used mostly because I already had them, there are simpler alternatives if starting from scratch.
 
-1. Main black box:
+## 3.1. Main black box:
 
 Box: https://www.amazon.nl/-/en/Distributor-Waterproof-Surface-Mounted-Junction-Diameter/dp/B0BQBP43H2/
 
@@ -45,7 +45,7 @@ goodies:
 - Red button: https://www.digikey.nl/nl/products/detail/adafruit-industries-llc/3489/7349495
 
 
-2. Power supply/cable:
+## 3.2. Power supply/cable:
 
 - Long cable to run 5V on, can use home electric cable, alternative: https://www.amazon.nl/-/en/CARLITS-2x0-8mm²-Extension-Electric-Lighting/dp/B08F7TS37H/
 - 2 polyfuses to avoid shorts causing problems: https://www.tinytronics.nl/en/components/fuses/self-restoring-fuse-pptc-polyfuse-2000ma-through-hole
@@ -54,7 +54,7 @@ goodies:
 - USB power supply (should have at home)
 - USB cable - cut one end and connect the 2 wires to the proto board screw terminal.
 
-3. Solenoid valves and hookup:
+## 3.3. Solenoid valves and hookup:
 
 - Solenoid valve: https://www.tinytronics.nl/en/mechanics-and-actuators/solenoids/solenoid-valves/solenoid-valve-latching-5v-brass-g1-2
 - Shrink tubes to insude wire hookup: https://www.amazon.nl/-/en/Preciva-Electric-Assortment-Electrical-Insulation/dp/B0778D22WM/
