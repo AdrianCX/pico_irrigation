@@ -58,7 +58,7 @@ goodies:
 
 - Solenoid valve: https://www.tinytronics.nl/en/mechanics-and-actuators/solenoids/solenoid-valves/solenoid-valve-latching-5v-brass-g1-2
 - Shrink tubes to insude wire hookup: https://www.amazon.nl/-/en/Preciva-Electric-Assortment-Electrical-Insulation/dp/B0778D22WM/
-- Insulating sleeve for wires: https://www.distrelec.biz/en/insulating-sleeve-6mm-red-brown-glass-fibre-silicone-bourgeois-pf03-062-08-321/p/15505284?pos=5&origPos=8&origPageSize=50&track=true&sid=Lso9yn9zyr&itemList=category
+- (choose 4m+) Insulating sleeve for wires: https://www.distrelec.biz/en/insulating-sleeve-6mm-red-brown-glass-fibre-silicone-bourgeois-pf03-062-08-321/p/15505284?pos=5&origPos=8&origPageSize=50&track=true&sid=Lso9yn9zyr&itemList=category
 - Water hammer arrestor: https://www.obadis.com/en/caleffi-antishock-wasserschlagdampfer-525150-uberwurfmutter-3-4-ig-x-3-4-ag-messing-gehause-verchromt.html
 - 2-way valve water distributor: https://www.amazon.nl/-/en/Manifold-Divider-Splitter-Connector-Separate/dp/B08XBPBCYF
 - Rubber rings to have water tight seals (1/2"): https://www.amazon.nl/-/en/Prasacco-Shower-Sealing-Washers-Connection/dp/B0B9NGWQYR/
