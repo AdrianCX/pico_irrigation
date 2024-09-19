@@ -56,16 +56,16 @@ goodies:
 
 ## 3.3. Solenoid valves and hookup:
 
-- Solenoid valve: https://www.tinytronics.nl/en/mechanics-and-actuators/solenoids/solenoid-valves/solenoid-valve-latching-5v-brass-g1-2
+- 2x Solenoid valves: https://www.tinytronics.nl/en/mechanics-and-actuators/solenoids/solenoid-valves/solenoid-valve-latching-5v-brass-g1-2
 - Shrink tubes to insude wire hookup: https://www.amazon.nl/-/en/Preciva-Electric-Assortment-Electrical-Insulation/dp/B0778D22WM/
 - (choose 4m+) Insulating sleeve for wires: https://www.distrelec.biz/en/insulating-sleeve-6mm-red-brown-glass-fibre-silicone-bourgeois-pf03-062-08-321/p/15505284?pos=5&origPos=8&origPageSize=50&track=true&sid=Lso9yn9zyr&itemList=category
 - Water hammer arrestor: https://www.obadis.com/en/caleffi-antishock-wasserschlagdampfer-525150-uberwurfmutter-3-4-ig-x-3-4-ag-messing-gehause-verchromt.html
 - 2-way valve water distributor: https://www.amazon.nl/-/en/Manifold-Divider-Splitter-Connector-Separate/dp/B08XBPBCYF
 - Rubber rings to have water tight seals (1/2"): https://www.amazon.nl/-/en/Prasacco-Shower-Sealing-Washers-Connection/dp/B0B9NGWQYR/
 - Rubber rings to have water tight seals (3/4"): https://www.amazon.nl/-/en/Lvcky-Garden-Shower-Rings-Rubber/dp/B07GX8Z72J/
-- Connectors (3/4" to 1/2"): https://www.amazon.nl/dp/B09FKBYY5X?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
-- Garden cable connectors on solenoid: https://www.amazon.nl/-/en/GARDENA-Premium-tap-connection-21mm/dp/B076WVH17N/
-- (optional) Other side hooked up to pipes: https://www.amazon.nl/-/en/18215-20/dp/B00PNUC9K6/
+- 2x Connectors (3/4" to 1/2"): https://www.amazon.nl/dp/B09FKBYY5X?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
+- 2x Garden cable connectors on solenoid: https://www.amazon.nl/-/en/GARDENA-Premium-tap-connection-21mm/dp/B076WVH17N/
+- 2x (optional) Other side hooked up to pipes: https://www.amazon.nl/-/en/18215-20/dp/B00PNUC9K6/
 
 Notes: 
 - should use the solid core wires from 1 to extend wires from solenoids.
