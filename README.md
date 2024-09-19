@@ -27,50 +27,60 @@ b. This is controlled via telegram. (a listener to web buttons then makes HTTP r
 # 3. Components used:
 
 
-1. Raspberry pi pico
-- https://www.kiwi-electronics.com/nl/raspberry-pi-pico-w-10938?search=raspberry%20pi%20pico
+1. Main black box:
 
-2. DRV8833
-- https://www.tinytronics.nl/en/mechanics-and-actuators/motor-controllers-and-drivers/stepper-motor-controllers-and-drivers/drv8833-bipolar-stepper-motor-and-dc-motor-motor-controller
+Box: https://www.amazon.nl/-/en/Distributor-Waterproof-Surface-Mounted-Junction-Diameter/dp/B0BQBP43H2/
 
-3. Large green and red plastic buttons at the bottom.
+Logic:
+- Raspberry pi pico w: https://www.digikey.nl/nl/products/detail/raspberry-pi/SC0918/16608263
+- DRV8833: https://www.digikey.nl/nl/products/detail/adafruit-industries-llc/1311/6198255
 
-4. Any electric waterproof junction box - drill holes for buttons on bottom to avoid water ingress, use glands for wires.
+goodies:
+- 2x Separate headers (break off as needed): https://www.tinytronics.nl/en/cables-and-connectors/connectors/pin-headers/male/40-pins-header-male-long
+- perf board: https://www.digikey.nl/nl/products/detail/adafruit-industries-llc/1609/5353655
+- 20x screw terminals: https://www.tinytronics.nl/en/cables-and-connectors/connectors/screw-terminals/2-pin-screw-terminal-block-connector-2.54mm-distance
+- solid core wires: https://www.digikey.nl/nl/products/detail/adafruit-industries-llc/1311/6198255
+- Green button: https://www.digikey.nl/nl/products/detail/adafruit-industries-llc/3487/7364334
+- Red button: https://www.digikey.nl/nl/products/detail/adafruit-industries-llc/3489/7349495
 
-- https://www.amazon.nl/dp/B0C7KSQK9Q?ref=ppx_yo2ov_dt_b_fed_asin_title
 
-5. Black cable is a 10 meter 2 wire electric cable.
+2. Power supply/cable:
 
-6. Hook up to a generic USB power supply via 2 polyfuses to avoid any issues with shorts (power supply also detects shorts but did not want to risk that)
+- Long cable to run 5V on, can use home electric cable, alternative: https://www.amazon.nl/-/en/CARLITS-2x0-8mm²-Extension-Electric-Lighting/dp/B08F7TS37H/
+- 2 polyfuses to avoid shorts causing problems: https://www.tinytronics.nl/en/components/fuses/self-restoring-fuse-pptc-polyfuse-2000ma-through-hole
+- A general purpose proto board: https://www.digikey.nl/nl/products/detail/digikey/DKS-SOLDERBREAD-02/15970925
+- 2x screw terminals (already part of 1)
+- USB power supply (should have at home)
+- USB cable - cut one end and connect the 2 wires to the proto board screw terminal.
 
-- https://www.tinytronics.nl/en/components/fuses/self-restoring-fuse-pptc-polyfuse-2000ma-through-hole
+3. Solenoid valves and hookup:
 
-7. Insulating sleeve for wires
+Solenoid valve: https://www.tinytronics.nl/en/mechanics-and-actuators/solenoids/solenoid-valves/solenoid-valve-latching-5v-brass-g1-2
+- should use the solid core wires from 1 to extend wires from solenoids.
 
-- https://www.distrelec.biz/en/insulating-sleeve-4mm-red-brown-glass-fibre-silicone-bourgeois-pf03-062-08-316/p/15505268?pos=5&origPos=6&origPageSize=50&track=true&sid=q7s4sH6bkP&itemList=category
+Shrink tubes to insude wire hookup: https://www.amazon.nl/-/en/Preciva-Electric-Assortment-Electrical-Insulation/dp/B0778D22WM/
 
-8. Time module (unused so far can ignore)
+Insulating sleeve for wires:
+- https://www.distrelec.biz/en/insulating-sleeve-6mm-red-brown-glass-fibre-silicone-bourgeois-pf03-062-08-321/p/15505284?pos=5&origPos=8&origPageSize=50&track=true&sid=Lso9yn9zyr&itemList=category
 
-9. Solenoid valve
-
-- https://www.tinytronics.nl/en/mechanics-and-actuators/solenoids/solenoid-valves/solenoid-valve-latching-5v-brass-g1-2
-
-10. Water hammer arrestor. (IMPORTANT - you don't want to destroy pipes when switching via solenoid)
-
-- Any should do based on preferrence: https://www.amazon.com/water-hammer-arrestor/s?k=water+hammer+arrestor
+Water hammer arrestor. (IMPORTANT - you don't want to destroy pipes when switching via solenoid)
 - The actual piece: https://www.obadis.com/en/caleffi-antishock-wasserschlagdampfer-525150-uberwurfmutter-3-4-ig-x-3-4-ag-messing-gehause-verchromt.html
+- Any should do based on preferrence: https://www.amazon.com/water-hammer-arrestor/s?k=water+hammer+arrestor
 
-11. 2-way valve water distributor
+2-way valve water distributor https://www.amazon.nl/-/en/Manifold-Divider-Splitter-Connector-Separate/dp/B08XBPBCYF
 
-- https://www.amazon.nl/dp/B07T41LBGH
+Rubber rings to have water tight seals:
+- 1/2" - https://www.amazon.nl/-/en/Prasacco-Shower-Sealing-Washers-Connection/dp/B0B9NGWQYR/
+- 3/4" - https://www.amazon.nl/-/en/Lvcky-Garden-Shower-Rings-Rubber/dp/B07GX8Z72J/
 
-12. Rubber rings to have water tight seals:
+Use the rubber rings on all connections to avoid water leaking
 
-- https://www.amazon.nl/dp/B097Q151ZN?ref=ppx_yo2ov_dt_b_fed_asin_title
+Connectors (3/4" to 1/2"): https://www.amazon.nl/dp/B09FKBYY5X?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 
-13. Connectors
-
-- https://www.amazon.nl/dp/B09FKBYY5X?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
+Garden part is based on prefference:
+- Gardena connectors on solenoid: https://www.amazon.nl/-/en/GARDENA-Premium-tap-connection-21mm/dp/B076WVH17N/
+- Other side hooked up to cables: https://www.amazon.nl/-/en/18215-20/dp/B00PNUC9K6/
+- garden cables.
 
 # 4. Software
 
