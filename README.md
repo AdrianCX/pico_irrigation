@@ -34,7 +34,7 @@ Box: https://www.amazon.nl/-/en/Distributor-Waterproof-Surface-Mounted-Junction-
 
 Logic:
 - Raspberry pi pico w: https://www.digikey.nl/nl/products/detail/raspberry-pi/SC0918/16608263
-- DRV8833: https://www.digikey.nl/nl/products/detail/adafruit-industries-llc/1311/6198255
+- DRV8833: https://www.tinytronics.nl/en/mechanics-and-actuators/motor-controllers-and-drivers/stepper-motor-controllers-and-drivers/drv8833-bipolar-stepper-motor-and-dc-motor-motor-controller
 
 goodies:
 - 2x Separate headers (break off as needed): https://www.tinytronics.nl/en/cables-and-connectors/connectors/pin-headers/male/40-pins-header-male-long
